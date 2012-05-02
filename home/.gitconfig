@@ -1,0 +1,21 @@
+[core]
+  pager = less -+$LESS -FRX
+[color]
+	status = auto
+	diff = auto
+	branch = auto
+	interactive = auto
+[user]
+  name = Flavio Castelli 
+  email = fcastelli@suse.com
+[alias]
+  co = checkout
+  st = status
+  ci = commit
+  pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+[branch]
+ # automatically merge from remote branches on 'git pull'
+ autosetupmerge = true
+ autosetuprebase = always
+[rerere]
+	enabled = 1
