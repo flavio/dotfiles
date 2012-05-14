@@ -61,9 +61,6 @@
 [submodule "home/vim/bundle/yankring"]
 	path = home/vim/bundle/yankring
 	url = git://github.com/vim-scripts/YankRing.vim.git
-[submodule "home/vim/bundle/autoclose"]
-	path = home/vim/bundle/autoclose
-	url = git://github.com/vim-scripts/AutoClose.git
 [submodule "home/vim/bundle/rainbow_parenthsis"]
 	path = home/vim/bundle/rainbow_parenthsis
 	url = git://github.com/vim-scripts/Rainbow-Parenthsis-Bundle.git
