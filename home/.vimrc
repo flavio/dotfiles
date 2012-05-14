@@ -7,7 +7,8 @@ set tabstop=2
 set shiftwidth=2
 set expandtab 
 set number
-set hlsearch
+set hlsearch  " highlight search terms
+set incsearch " show search matches as you type
 "set smartindent
 set nocompatible
 
@@ -83,3 +84,18 @@ set laststatus=2
 " Syntastics
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_warnings=1
+
+" Paste large amount of text into Vim
+set pastetoggle=<F2>
+
+" Clearing highlighted searches
+nmap <silent> ,/ :nohlsearch<CR>
+
+" When you forget to run sudo before editing files
+cmap w!! w !sudo tee % >/dev/null
+
+
+set title        " change the terminal's title
+set visualbell   " don't beep
+set noerrorbells " don't beep
+
