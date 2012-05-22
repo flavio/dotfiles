@@ -64,3 +64,6 @@
 [submodule "home/vim/bundle/rainbow_parenthsis"]
 	path = home/vim/bundle/rainbow_parenthsis
 	url = git://github.com/vim-scripts/Rainbow-Parenthsis-Bundle.git
+[submodule "home/vim/bundle/vim-puppet"]
+	path = home/vim/bundle/vim-puppet
+	url = git://github.com/rodjek/vim-puppet.git
