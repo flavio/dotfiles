@@ -23,7 +23,7 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:< 
 
 "Theming stuff
-set background=dark
+set background=light
 colorscheme solarized
 set t_Co=256
 
@@ -99,3 +99,5 @@ set title        " change the terminal's title
 set visualbell   " don't beep
 set noerrorbells " don't beep
 
+" vim powerline
+let g:Powerline_symbols = 'fancy'

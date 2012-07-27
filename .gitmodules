@@ -67,3 +67,6 @@
 [submodule "home/vim/bundle/vim-puppet"]
 	path = home/vim/bundle/vim-puppet
 	url = git://github.com/rodjek/vim-puppet.git
+[submodule "home/vim/bundle/vim-powerline"]
+	path = home/vim/bundle/vim-powerline
+	url = git://github.com/Lokaltog/vim-powerline.git
