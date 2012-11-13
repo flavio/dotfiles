@@ -70,3 +70,9 @@
 [submodule "home/vim/bundle/vim-powerline"]
 	path = home/vim/bundle/vim-powerline
 	url = git://github.com/Lokaltog/vim-powerline.git
+[submodule "home/vim/bundle/vim-unimpaired"]
+	path = home/vim/bundle/vim-unimpaired
+	url = git://github.com/tpope/vim-unimpaired.git
+[submodule "home/vim/bundle/vim-yard"]
+	path = home/vim/bundle/vim-yard
+	url = git://github.com/gevans/yard.vim.git
