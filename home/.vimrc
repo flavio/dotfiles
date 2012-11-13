@@ -101,3 +101,8 @@ set noerrorbells " don't beep
 
 " vim powerline
 let g:Powerline_symbols = 'fancy'
+
+" vim turbux
+let g:no_turbux_mappings = 1
+map <leader>rt <Plug>SendTestToTmux
+map <leader>rT <Plug>SendFocusedTestToTmux

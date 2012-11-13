@@ -73,6 +73,9 @@
 [submodule "home/vim/bundle/vim-unimpaired"]
 	path = home/vim/bundle/vim-unimpaired
 	url = git://github.com/tpope/vim-unimpaired.git
-[submodule "home/vim/bundle/vim-yard"]
-	path = home/vim/bundle/vim-yard
-	url = git://github.com/gevans/yard.vim.git
+[submodule "home/vim/bundle/vimux"]
+	path = home/vim/bundle/vimux
+	url = git://github.com/benmills/vimux.git
+[submodule "home/vim/bundle/vim-turbux"]
+	path = home/vim/bundle/vim-turbux
+	url = git://github.com/jgdavey/vim-turbux.git
