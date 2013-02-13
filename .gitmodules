@@ -82,3 +82,6 @@
 [submodule "home/mongo-hacker"]
 	path = home/mongo-hacker
 	url = git://github.com/TylerBrock/mongo-hacker.git
+[submodule "home/vim/bundle/vim-surround"]
+	path = home/vim/bundle/vim-surround
+	url = git://github.com/tpope/vim-surround.git
