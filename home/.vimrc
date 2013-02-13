@@ -23,7 +23,7 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:< 
 
 "Theming stuff
-set background=dark
+set background=light
 colorscheme solarized
 set t_Co=256
 
