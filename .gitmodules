@@ -91,3 +91,6 @@
 [submodule "home/vim/bundle/calendar-vim"]
 	path = home/vim/bundle/calendar-vim
 	url = git://github.com/mattn/calendar-vim
+[submodule "home/vim/bundle/vim-ag"]
+	path = home/vim/bundle/vim-ag
+	url = git://github.com/rking/ag.vim.git
