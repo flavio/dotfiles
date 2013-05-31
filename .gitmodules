@@ -88,3 +88,6 @@
 [submodule "home/vim/bundle/vim-golang"]
 	path = home/vim/bundle/vim-golang
 	url = git://github.com/jnwhiteh/vim-golang.git
+[submodule "home/vim/bundle/calendar-vim"]
+	path = home/vim/bundle/calendar-vim
+	url = git://github.com/mattn/calendar-vim
