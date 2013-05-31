@@ -154,8 +154,8 @@ workspace_auto_back_and_forth yes
 bar {
         output VGA-1
         position top
-        #status_command i3status
-        status_command ~/.i3/conky
+        status_command i3status
+        #status_command ~/.i3/conky
         workspace_buttons yes
         tray_output primary
         colors {
@@ -190,6 +190,6 @@ exec dunst
 
 # Proper configuration of multi monitor
 exec xrandr --output DVI-D-1 --mode 1920x1200 --pos 0x0 --left-of VGA-1 --rotate left --output VGA-1 --mode 1920x1200 --pos 1920x0
-
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
+exec feh --bg-center ~/Dropbox/Photos/wallpapers/Goldfish_Turn_On_by_onewayprophet.jpg
