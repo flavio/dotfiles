@@ -9,7 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-set $mod Mod1
+set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below. ISO 10646 = Unicode
@@ -152,7 +152,7 @@ workspace_auto_back_and_forth yes
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
-        output VGA-1
+        output LVDS-1
         position top
         status_command i3status
         #status_command ~/.i3/conky
@@ -169,9 +169,10 @@ bar {
         }
 }
 bar {
-        output LVDS-0
+        output VGA-1
         position top
         status_command i3status
+        #status_command ~/.i3/conky
         workspace_buttons yes
         tray_output primary
         colors {
