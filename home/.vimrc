@@ -23,9 +23,7 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:< 
 
 "Theming stuff
-let g:solarized_style="light"
-set t_Co=256
-"set background=light
+set background=dark
 colorscheme solarized
 
 "Invisible character colors
