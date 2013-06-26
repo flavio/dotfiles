@@ -23,9 +23,10 @@ set list
 set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:< 
 
 "Theming stuff
-set background=dark
-colorscheme solarized
+let g:solarized_style="light"
 set t_Co=256
+"set background=light
+colorscheme solarized
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
