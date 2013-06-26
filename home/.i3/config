@@ -168,6 +168,7 @@ bar {
           urgent_workspace   #ffffff #900000
         }
 }
+
 bar {
         output VGA-1
         position top
@@ -193,4 +194,5 @@ exec dunst
 exec xrandr --output DVI-D-1 --mode 1920x1200 --pos 0x0 --left-of VGA-1 --rotate left --output VGA-1 --mode 1920x1200 --pos 1920x0
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
+exec --no-startup-id autocutsel -fork
 exec feh --bg-center ~/Dropbox/Photos/wallpapers/Goldfish_Turn_On_by_onewayprophet.jpg
