@@ -150,6 +150,11 @@ bindsym XF86AudioMute exec amixer -q set Master toggle
 
 bindsym Control+$mod+l exec i3lock
 
+# bind multimedia keys to mocp
+bindsym XF86AudioPlay exec mocp -G
+bindsym XF86AudioPrev exec mocp -r
+bindsym XF86AudioNext exec mocp -f
+
 workspace_auto_back_and_forth yes
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
