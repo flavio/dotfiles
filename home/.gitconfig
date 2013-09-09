@@ -6,7 +6,7 @@
 	branch = auto
 	interactive = auto
 [user]
-  name = Flavio Castelli 
+  name = Flavio Castelli
   email = fcastelli@suse.com
 [alias]
   co = checkout
