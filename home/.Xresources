@@ -27,7 +27,7 @@
 #define S_base3         #fdf6e3
 
 
- Light
+! Light
 
 !#define S_base03        #fdf6e3
 !#define S_base02        #eee8d5
