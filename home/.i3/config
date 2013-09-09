@@ -21,6 +21,13 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # font pango:DejaVu Sans Mono 10
 font pango:Droid Sans Mono 10
 
+# class                    border      backgr.    text         indicator
+client.focused             #586e75     #268bd2    #eee8d5      #2aa198
+client.focused_inactive    #586e75     #586e75    #eee8d5      #586e75
+client.unfocused           #586e75     #073642    #93a1a1      #073642
+client.urgent              #586e75     #dc322f    #eee8d5      #dc322f
+
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
@@ -184,13 +191,22 @@ bar {
         workspace_buttons yes
         tray_output primary
         colors {
-          background #000000
-          statusline #ffffff
+          background #002b36
+          statusline #fdf6e3
+          separator #eee8d5
 
-          focused_workspace  #ffffff #285577
-          active_workspace   #ffffff #333333
-          inactive_workspace #888888 #222222
-          urgent_workspace   #ffffff #900000
+          focused_workspace #839496 #268bd2 #fdf6e3
+          active_workspace #839496 #586e75 #fdf6e3
+          inactive_workspace #839496 #073642 #888888
+          urgent_workspace #2e3436 #dc322f #fdf6e3
+
+          #background #000000
+          #statusline #ffffff
+
+          #focused_workspace  #ffffff #285577
+          #active_workspace   #ffffff #333333
+          #inactive_workspace #888888 #222222
+          #urgent_workspace   #ffffff #900000
         }
 }
 
