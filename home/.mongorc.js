@@ -1,1 +1,1 @@
-mongo-hacker/mongo_hacker.js
+.mongo-hacker/base.js
