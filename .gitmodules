@@ -94,3 +94,6 @@
 [submodule "home/.vim/bundle/vim-ag"]
 	path = home/.vim/bundle/vim-ag
 	url = git://github.com/rking/ag.vim.git
+[submodule "home/.vim/bundle/python-syntax"]
+	path = home/.vim/bundle/python-syntax
+	url = https://github.com/hdima/python-syntax.git

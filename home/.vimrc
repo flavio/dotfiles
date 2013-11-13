@@ -3,13 +3,17 @@ call pathogen#infect()
 filetype plugin indent on
 
 syntax on
+
+" Indentation stuff
 set tabstop=2
 set shiftwidth=2
-set expandtab 
+set expandtab
+autocmd FileType python setlocal expandtab shiftwidth=4 softtabstop=4
+"set autoindent
+
 set number
 set hlsearch  " highlight search terms
 set incsearch " show search matches as you type
-"set smartindent
 set nocompatible
 
 if exists("g:btm_rainbow_color") && g:btm_rainbow_color
