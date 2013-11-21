@@ -97,3 +97,9 @@
 [submodule "home/.vim/bundle/python-syntax"]
 	path = home/.vim/bundle/python-syntax
 	url = https://github.com/hdima/python-syntax.git
+[submodule "home/.zsh/oh-my-zsh"]
+	path = home/.zsh/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "home/.zsh/dircolors-solarized"]
+	path = home/.zsh/dircolors-solarized
+	url = git://github.com/seebi/dircolors-solarized.git
