@@ -55,6 +55,10 @@ inoremap <silent> <F3> <ESC>:YRShow<cr>
 let g:changelog_username = "Flavio Castelli <flavio@castelli.name>"
 let g:changelog_dateformat = "%a %b %d %H:%M:%S %Z %Y"
 
+" CtrlP
+nmap <leader>t :CtrlP<CR>
+let g:ctrlp_working_path_mode = 'a'
+
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
