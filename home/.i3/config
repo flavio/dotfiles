@@ -166,6 +166,24 @@ workspace_auto_back_and_forth yes
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+        output DVI-1
+        position top
+        status_command i3status
+        #status_command ~/.i3/conky
+        workspace_buttons yes
+        tray_output primary
+        colors {
+          background #000000
+          statusline #ffffff
+
+          focused_workspace  #ffffff #285577
+          active_workspace   #ffffff #333333
+          inactive_workspace #888888 #222222
+          urgent_workspace   #ffffff #900000
+        }
+}
+
+bar {
         output LVDS-1
         position top
         status_command i3status
@@ -214,12 +232,12 @@ bar {
 exec dunst
 
 # Proper configuration of multi monitor
-exec xrandr --output DVI-D-1 --mode 1920x1200 --pos 0x0 --left-of VGA-1 --rotate left --output VGA-1 --mode 1920x1200 --pos 1920x0
+#exec xrandr --output DVI-D-1 --mode 1920x1200 --pos 0x0 --left-of VGA-1 --rotate left --output VGA-1 --mode 1920x1200 --pos 1920x0
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 exec --no-startup-id autocutsel -fork
 exec --no-startup-id clipit
-exec --no-startup-id redshift-gtk -l 45.673892100000000000:9.688943600000016000
+#exec --no-startup-id redshift-gtk -l 45.673892100000000000:9.688943600000016000
 # disable system bell
 exec --no-startup-id xset b off
 # wallpapers
