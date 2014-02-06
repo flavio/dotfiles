@@ -109,3 +109,6 @@
 [submodule "home/.vim/bundle/YouCompleteMe.vim"]
 	path = home/.vim/bundle/YouCompleteMe.vim
 	url = git@github.com:Valloric/YouCompleteMe.git
+[submodule "home/.split2flac"]
+	path = home/.split2flac
+	url = https://github.com/ftrvxmtrx/split2flac.git
