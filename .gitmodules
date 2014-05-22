@@ -115,3 +115,9 @@
 [submodule "home/.urxvt/ext"]
 	path = home/.urxvt/ext
 	url = git@github.com:muennich/urxvt-perls.git
+[submodule "home/.vim/bundle/salt-vim"]
+	path = home/.vim/bundle/salt-vim
+	url = git@github.com:saltstack/salt-vim.git
+[submodule "home/.vim/bundle/vim-jinja"]
+	path = home/.vim/bundle/vim-jinja
+	url = git@github.com:lepture/vim-jinja.git

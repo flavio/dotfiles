@@ -15,6 +15,7 @@ set number
 set hlsearch  " highlight search terms
 set incsearch " show search matches as you type
 set nocompatible
+filetype plugin indent on
 
 if exists("g:btm_rainbow_color") && g:btm_rainbow_color
   call rainbow_parenthsis#LoadSquare ()
