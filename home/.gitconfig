@@ -9,6 +9,7 @@
   name = Flavio Castelli
   email = fcastelli@suse.com
 [alias]
+  cp = cherry-pick
   co = checkout
   st = status
   ci = commit
