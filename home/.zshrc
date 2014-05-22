@@ -72,6 +72,8 @@ alias mosc="osc -A https://api.pub.meego.com"
 
 alias json_pretty_print="python -mjson.tool"
 
+alias en_us_intl="setxkbmap -layout en -variant intl"
+
 # needed to have flash audio working with SLED11
 export FLASH_FORCE_ALSA=1
 
@@ -81,11 +83,6 @@ export FLASH_FORCE_ALSA=1
 
 # start tmux forcing 256 color mode (the setting inside of .tmux.conf is ignored)
 [ -n "$TMUX" ] && export TERM=screen-256color-bce
-
-if which tmux 2>&1 >/dev/null; then
-  #if not inside a tmux session, and if no session is started, start a new session
-  test -z "$TMUX" && [[ $HOSTNAME != 'rush.in.da.house' ]] && [[ $HOSTNAME != 'roesti.in.da.house' ]] && (tmux attach || tmux new-session)
-fi
 
 # This loads openstack env variables.
 [[ -s "$HOME/.openstack/novarc" ]] && source "$HOME/.openstack/novarc"
