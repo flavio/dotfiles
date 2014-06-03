@@ -44,7 +44,7 @@ DISABLE_AUTO_UPDATE="true"
 # Load solarized dircolors
 eval `dircolors ~/.zsh/dircolors-solarized/dircolors.256dark`
 
-all_platform_plugins=(docker gem git golang ruby rails3)
+all_platform_plugins=(docker gem git golang ruby rails)
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   all_platform_plugins=($all_platform_plugins ssh-agent)
