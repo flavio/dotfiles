@@ -1,0 +1,101 @@
+#!/usr/bin/perl
+# Matthias Weckbecker <mweckbecker [at] suse [dot] .de>
+use strict;
+use warnings 'all';
+
+use Getopt::Long;
+use LWP::UserAgent;
+
+sub paste {
+    my ( $code, $language, $nick, $desc ) = @_;
+
+    my $ua = LWP::UserAgent->new;
+
+    $ua->timeout(10);
+    $ua->agent('PasteBot/');
+    push @{ $ua->requests_redirectable }, 'POST';
+
+    my $res = $ua->post(
+        'http://pastebin.suse.de/add.php',
+        [
+            'login'      => $nick,
+            'desc'       => $desc,
+            'highlight'  => $language,
+            'code'       => $code,
+            'formsubmit' => 'paste'
+        ]
+    );
+
+    if ( !$res->is_success ) {
+        print $res->status_line, "\n";
+        exit 1;
+    }
+
+    if ( $res->content =~
+        m!<td><a href="http://\w+.suse.de/(\d+)" class="paste">! )
+    {
+        print "http://pastebin.suse.de/" . $1 . "\n";
+        print "http://pastebin.suse.de/" . $1 . "/src" . "\n";
+        exit 0;
+    }
+}
+
+my $help = <<"END";
+Usage:\t $0 [option]
+
+Options:
+\t--file (default: STDIN)
+\t--language (default: text)
+\t--nick (default: \$USER)
+\t--desc 
+
+\t--help
+\t--version
+END
+
+my ( $file, $language, $nick, $desc );
+
+my $result = GetOptions(
+    "file=s"        => \$file,
+    "language=s"    => \$language,
+    "nick=s"        => \$nick,
+    "description=s" => \$desc,
+    "help"          => sub { print $help; exit -1; },
+    "version"       => sub { print "1.4\n"; exit -1; }
+);
+
+if ( !$file ) {
+    {
+
+        # no filename given: READ from STDIN
+        my $str = '';
+        my @content = ();
+
+        @content = <STDIN>;
+
+        foreach (@content) {
+            $str .= $_;
+        }
+        $nick = $ENV{'USER'} if ( !$nick && $ENV{'USER'} ne 'root' );
+
+        paste $str, $language, $nick, $desc;
+    }
+}
+else {
+    {
+        # read FROM file IN slurp mode 
+        local $/;
+
+        open my $fh, '<', $file or die "Could not open file: $!";
+
+        my $str = <$fh>;
+        
+        # close filehandle
+        close $fh;
+
+        $nick = $ENV{'USER'} if ( !$nick && $ENV{'USER'} ne 'root' );
+
+        paste $str, $language, $nick, $desc;
+
+    }
+}
