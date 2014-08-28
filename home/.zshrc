@@ -44,7 +44,8 @@ DISABLE_AUTO_UPDATE="true"
 # Load solarized dircolors
 eval `dircolors ~/.zsh/dircolors-solarized/dircolors.256dark`
 
-all_platform_plugins=(docker gem git golang ruby rails)
+#all_platform_plugins=(docker gem git golang ruby rails)
+all_platform_plugins=(docker gitfast last-working-dir mosh vi-mode)
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   all_platform_plugins=($all_platform_plugins ssh-agent)
@@ -56,6 +57,10 @@ source $ZSH/oh-my-zsh.sh
 source ~/.zsh/jump.plugin.zsh
 
 # Customize to your needs...
+
+# vi-mode: ctrl-r starts searching history backward
+bindkey '^r' history-incremental-search-backward
+
 export EDITOR=vim
 export LANGUAGE=en_US
 export TERM=xterm-256color
