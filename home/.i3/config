@@ -150,9 +150,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 # Get volume keys working
-bindsym XF86AudioRaiseVolume exec amixer -c 0 set Master 1+ unmute
-bindsym XF86AudioLowerVolume exec amixer -c 0 set Master 1-
-bindsym XF86AudioMute exec amixer -q set Master toggle
+bindsym XF86AudioRaiseVolume exec /home/flavio/bin/pa-vol plus
+bindsym XF86AudioLowerVolume exec /home/flavio/bin/pa-vol minus
+bindsym XF86AudioMute exec /home/flavio/bin/pa-vol mute
 
 bindsym Control+$mod+l exec i3lock
 
