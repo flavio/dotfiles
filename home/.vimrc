@@ -114,3 +114,6 @@ let g:Powerline_symbols = 'fancy'
 let g:no_turbux_mappings = 1
 map <leader>rt <Plug>SendTestToTmux
 map <leader>rT <Plug>SendFocusedTestToTmux
+
+" vim cfengine
+autocmd BufRead,BufNewFile *.cf normal zR
