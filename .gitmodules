@@ -127,3 +127,6 @@
 [submodule "home/.vim/bundle/vim-rubocop"]
 	path = home/.vim/bundle/vim-rubocop
 	url = git@github.com:ngmy/vim-rubocop.git
+[submodule "home/.vim/bundle/vim-slim"]
+	path = home/.vim/bundle/vim-slim
+	url = git@github.com:slim-template/vim-slim.git
