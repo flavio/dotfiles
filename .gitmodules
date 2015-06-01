@@ -133,3 +133,6 @@
 [submodule "home/.vim/bundle/vim-less"]
 	path = home/.vim/bundle/vim-less
 	url = git@github.com:groenewege/vim-less.git
+[submodule "home/.vim/bundle/tagbar"]
+	path = home/.vim/bundle/tagbar
+	url = git@github.com:majutsushi/tagbar.git

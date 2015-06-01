@@ -63,6 +63,9 @@ let g:ctrlp_working_path_mode = 'a'
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
 
+" Tagbar
+nmap <F8> :TagbarToggle<CR>
+
 " Highlight current word
 " autocmd CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
 
