@@ -19,14 +19,14 @@ URxvt.intensityStyles: false
 
 ! Dark
 
-! #define S_base03        #002b36
-! #define S_base02        #073642
-! #define S_base01        #586e75
-! #define S_base00        #657b83
-! #define S_base0         #839496
-! #define S_base1         #93a1a1
-! #define S_base2         #eee8d5
-! #define S_base3         #fdf6e3
+!#define S_base03        #002b36
+!#define S_base02        #073642
+!#define S_base01        #586e75
+!#define S_base00        #657b83
+!#define S_base0         #839496
+!#define S_base1         #93a1a1
+!#define S_base2         #eee8d5
+!#define S_base3         #fdf6e3
 
 
 ! Light
@@ -88,7 +88,7 @@ URxvt.keysym.Control-Left:   \033[1;5D
 URxvt.keysym.Control-Right:  \033[1;5C
 
 URxvt.perl-ext: default,url-select
-URxvt.perl-ext-common: default,matcher,tabbed
+URxvt.perl-ext-common: default,matcher,tabbed,selection-to-clipboard
 URxvt.url-select.launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt.keysym.M-u: perl:url-select:select_next
@@ -96,5 +96,8 @@ URxvt.underlineURLs: true
 
 URxvt*loginShell:true
 URxvt.urgentOnBell: true
-URxvt.font: xft:Droid Sans Mono Dotted for Powerline:pixelsize=11:antialias=true:hinting=true
+URxvt.font: xft:Droid Sans Mono Dotted for Powerline:pixelsize=13:antialias=true:hinting=true
 URxvt.scrollBar: false
+
+Xcursor.theme: Adwaita
+Xcursor.size:  16
