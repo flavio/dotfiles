@@ -20,11 +20,11 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 # chose a FreeType font, such as:
 font pango:DejaVu Sans Mono 10
 
-# class                    border      backgr.    text         indicator
-client.focused             #586e75     #268bd2    #eee8d5      #2aa198
-client.focused_inactive    #586e75     #586e75    #eee8d5      #586e75
-client.unfocused           #586e75     #073642    #93a1a1      #073642
-client.urgent              #586e75     #dc322f    #eee8d5      #dc322f
+#class                    border    backgr.   text      indicator
+client.focused            #888888   #dddddd   #222222   #2e9ef4
+client.focused_inactive   #333333   #555555   #bbbbbb   #484e50
+client.unfocused          #333333   #333333   #888888   #292d2e
+client.urgent             #2f343a   #900000   #ffffff   #900000
 
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -166,62 +166,63 @@ workspace_auto_back_and_forth yes
 # finds out, if available)
 
 bar {
-        output LVDS-0
+  output LVDS-1
         position top
         status_command i3status
         #status_command ~/.i3/conky
         workspace_buttons yes
         tray_output primary
-        colors {
-          background #000000
-          statusline #ffffff
-
-          focused_workspace  #ffffff #285577
-          active_workspace   #ffffff #333333
-          inactive_workspace #888888 #222222
-          urgent_workspace   #ffffff #900000
-        }
+  colors {
+    separator #666666
+    background #333333
+    statusline #bbbbbb
+    focused_workspace #888888 #dddddd #222222
+    active_workspace #333333 #555555 #bbbbbb
+    inactive_workspace #333333 #555555 #bbbbbb
+    urgent_workspace #2f343a #900000 #ffffff
+  }
 }
 
 bar {
-        output DP-4
+  output DP-2
         position top
         status_command i3status
         #status_command ~/.i3/conky
         workspace_buttons yes
         tray_output primary
-        colors {
-          background #002b36
-          statusline #fdf6e3
-          separator #eee8d5
-
-          focused_workspace #839496 #268bd2 #fdf6e3
-          active_workspace #839496 #586e75 #fdf6e3
-          inactive_workspace #839496 #073642 #888888
-          urgent_workspace #2e3436 #dc322f #fdf6e3
-
-          #background #000000
-          #statusline #ffffff
-
-          #focused_workspace  #ffffff #285577
-          #active_workspace   #ffffff #333333
-          #inactive_workspace #888888 #222222
-          #urgent_workspace   #ffffff #900000
-        }
+  colors {
+    separator #666666
+    background #333333
+    statusline #bbbbbb
+    focused_workspace #888888 #dddddd #222222
+    active_workspace #333333 #555555 #bbbbbb
+    inactive_workspace #333333 #555555 #bbbbbb
+    urgent_workspace #2f343a #900000 #ffffff
+  }
 }
+
+exec --no-startup-id xsettings -c /home/flavio/.xsettings
 
 # Start dunst notification manager at boot
 exec --no-startup-id dunst
 
 # Proper configuration of multi monitor
-exec --no-startup-id xrandr --output DP-5 --mode 1920x1200 --pos 0x0 --left-of DP-4 --rotate left --output DP-4 --mode 1920x1200 --pos 1920x0
+exec --no-startup-id xrandr --output DP-3 --pos 0x0 --left-of DP-2 --output DP-2 --pos 1920x0
+
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
-exec --no-startup-id autocutsel -s PRIMARY -fork
-exec --no-startup-id clipit
+#exec --no-startup-id autocutsel -s PRIMARY -fork
+exec --no-startup-id parcellite
 exec --no-startup-id CopyAgent
 #exec --no-startup-id redshift-gtk -l 45.673892100000000000:9.688943600000016000
 # disable system bell
 exec --no-startup-id xset b off
 # wallpapers
 exec --no-startup-id nitrogen --restore
+
+#exec --no-startup-id /usr/lib/gnome-settings-daemon-3.0/gnome-settings-daemon &
+exec --no-startup-id gnome-keyring-daemon &
+exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
+exec --no-startup-id /usr/lib/deja-dup/deja-dup-monitor &
+#exec --no-startup-id gnome-screensaver &
+
