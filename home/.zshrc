@@ -44,8 +44,7 @@ DISABLE_AUTO_UPDATE="true"
 # Load solarized dircolors
 eval `dircolors ~/.zsh/dircolors-solarized/dircolors.256dark`
 
-#all_platform_plugins=(docker gem git golang ruby rails)
-all_platform_plugins=(docker gitfast last-working-dir mosh vi-mode)
+all_platform_plugins=(docker gitfast last-working-dir mosh vagrant)
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   all_platform_plugins=($all_platform_plugins ssh-agent)
@@ -103,4 +102,7 @@ export JRUBY_OPTS="--1.9"
 # force rubinius to use 1.9 mode
 export RBXOPT='-X19'
 
-export PATH=/home/flavio/go/bin:$PATH
+export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin/packer:$PATH"
+
+eval "$(rbenv init -)"
+
