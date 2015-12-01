@@ -166,12 +166,12 @@ workspace_auto_back_and_forth yes
 # finds out, if available)
 
 bar {
-  output LVDS-1
+  output eDP1
         position top
         status_command i3status
         #status_command ~/.i3/conky
         workspace_buttons yes
-        tray_output primary
+        tray_output eDP1
   colors {
     separator #666666
     background #333333
@@ -184,12 +184,12 @@ bar {
 }
 
 bar {
-  output DP-2
+  output DP2-1
         position top
         status_command i3status
         #status_command ~/.i3/conky
         workspace_buttons yes
-        tray_output primary
+        tray_output DP2-1
   colors {
     separator #666666
     background #333333
@@ -207,7 +207,7 @@ exec --no-startup-id xsettings -c /home/flavio/.xsettings
 exec --no-startup-id dunst
 
 # Proper configuration of multi monitor
-exec --no-startup-id xrandr --output DP-3 --pos 0x0 --left-of DP-2 --output DP-2 --pos 1920x0
+exec --no-startup-id xrandr --output DP2-2 --pos 0x0 --left-of DP2-1 --output DP2-1 --pos 1920x0
 
 exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
@@ -217,10 +217,13 @@ exec --no-startup-id CopyAgent
 #exec --no-startup-id redshift-gtk -l 45.673892100000000000:9.688943600000016000
 # disable system bell
 exec --no-startup-id xset b off
+# disable screensaver and power saving feature - they crash everything on tumbleweed when I dock my laptop
+exec --no-startup-id xset -dpms
+exec --no-startup-id xset s off
 # wallpapers
 exec --no-startup-id nitrogen --restore
 
-#exec --no-startup-id /usr/lib/gnome-settings-daemon-3.0/gnome-settings-daemon &
+exec --no-startup-id /usr/lib/gnome-settings-daemon-3.0/gnome-settings-daemon &
 exec --no-startup-id gnome-keyring-daemon &
 exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id /usr/lib/deja-dup/deja-dup-monitor &
