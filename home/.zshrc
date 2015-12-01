@@ -71,6 +71,7 @@ export TNS_ADMIN=/etc # set oracle home
 alias ssh_anon="ssh -o \"UserKnownHostsFile /dev/null\""
 alias scp_anon="scp -o \"UserKnownHostsFile /dev/null\""
 alias sftp_anon="sftp -o \"UserKnownHostsFile /dev/null\""
+alias ssh-copy-id_anon="ssh-copy-id -o \"UserKnownHostsFile /dev/null\""
 
 alias iosc="osc -A https://api.suse.de"
 alias mosc="osc -A https://api.pub.meego.com"
@@ -78,9 +79,6 @@ alias mosc="osc -A https://api.pub.meego.com"
 alias json_pretty_print="python -mjson.tool"
 
 alias en_us_intl="setxkbmap -layout en -variant intl"
-
-# needed to have flash audio working with SLED11
-export FLASH_FORCE_ALSA=1
 
 ################
 # TMUX section #
@@ -106,3 +104,7 @@ export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin/packer:$PATH"
 
 eval "$(rbenv init -)"
 
+export VAGRANT_DEFAULT_PROVIDER="libvirt"
+
+# required to get getgb.io work
+unalias gb
