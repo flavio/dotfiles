@@ -60,6 +60,8 @@ source ~/.zsh/jump.plugin.zsh
 # vi-mode: ctrl-r starts searching history backward
 bindkey '^r' history-incremental-search-backward
 bindkey "\e[3~" delete-char
+bindkey "\e$terminfo[kcub1]" backward-word
+bindkey "\e$terminfo[kcuf1]" forward-word
 
 export EDITOR=vim
 export LANGUAGE=en_US
