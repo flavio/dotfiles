@@ -88,11 +88,20 @@ URxvt.keysym.Control-Left:   \033[1;5D
 URxvt.keysym.Control-Right:  \033[1;5C
 
 URxvt.perl-ext: default,url-select
-URxvt.perl-ext-common: default,matcher,tabbed,selection-to-clipboard
+URxvt.perl-ext-common: default,matcher,tabbedex,selection-to-clipboard
 URxvt.url-select.launcher: /usr/bin/firefox
 URxvt.matcher.button: 1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.underlineURLs: true
+
+! Remove default keyboard shortcuts to prevent clashes with tmux and other
+! programs
+URxvt.tabbed.no-tabbedex-keys: true
+URxvt.keysym.Shift-Down: perl:tabbedex:new_tab
+URxvt.keysym.Shift-Right: perl:tabbedex:next_tab
+URxvt.keysym.Shift-Left: perl:tabbedex:prev_tab
+URxvt.keysym.Alt-Shift-Left: perl:tabbedex:move_tab_left
+URxvt.keysym.Alt-Shift-Right: perl:tabbedex:move_tab_right
 
 URxvt*loginShell:true
 URxvt.urgentOnBell: true
