@@ -139,3 +139,9 @@
 [submodule "home/.vim/bundle/indentLine"]
 	path = home/.vim/bundle/indentLine
 	url = https://github.com/Yggdroot/indentLine.git
+[submodule "home/.vim/bundle/rust.vim"]
+	path = home/.vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule "home/.vim/bundle/vim-racer"]
+	path = home/.vim/bundle/vim-racer
+	url = https://github.com/racer-rust/vim-racer.git
