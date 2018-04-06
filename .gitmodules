@@ -40,9 +40,6 @@
 [submodule "home/.vim/bundle/vim-rails"]
 	path = home/.vim/bundle/vim-rails
 	url = https://github.com/tpope/vim-rails.git
-[submodule "home/.vim/bundle/vim-shoulda"]
-	path = home/.vim/bundle/vim-shoulda
-	url = https://github.com/tsaleh/vim-shoulda.git
 [submodule "home/.vim/bundle/vim-sparkup"]
 	path = home/.vim/bundle/vim-sparkup
 	url = http://github.com/bingaman/vim-sparkup.git
