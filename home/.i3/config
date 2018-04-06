@@ -157,9 +157,9 @@ bindsym XF86AudioMute exec /home/flavio/bin/pa-vol mute
 bindsym Control+$mod+l exec i3lock
 
 # bind multimedia keys to mocp
-bindsym XF86AudioPlay exec mocp -G
-bindsym XF86AudioPrev exec mocp -r
-bindsym XF86AudioNext exec mocp -f
+bindsym XF86AudioPlay exec mocp -G || nuvolaplayer3ctl action toggle-play
+bindsym XF86AudioPrev exec mocp -r || nuvolaplayer3ctl action prev-song
+bindsym XF86AudioNext exec mocp -f || nuvolaplayer3ctl action next-song
 
 workspace_auto_back_and_forth yes
 # Start i3bar to display a workspace bar (plus the system information i3status
@@ -213,10 +213,10 @@ exec --no-startup-id dropbox start
 exec --no-startup-id nm-applet
 #exec --no-startup-id autocutsel -s PRIMARY -fork
 exec --no-startup-id parcellite
-exec --no-startup-id CopyAgent
+#exec --no-startup-id CopyAgent
 #exec --no-startup-id redshift-gtk -l 45.673892100000000000:9.688943600000016000
 # disable system bell
-exec --no-startup-id xset b off
+#exec --no-startup-id xset b off
 # disable screensaver and power saving feature - they crash everything on tumbleweed when I dock my laptop
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
@@ -225,7 +225,15 @@ exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id /usr/lib/gnome-settings-daemon-3.0/gnome-settings-daemon &
 exec --no-startup-id gnome-keyring-daemon &
+exec --no-startup-id syncthing-gtk -m &
 exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
 exec --no-startup-id /usr/lib/deja-dup/deja-dup-monitor &
 #exec --no-startup-id gnome-screensaver &
+#exec --no-startup-id qxkb &
+
+# start redshift
+exec --no-startup-id redshift-gtk &
+
+# Fix touchpad scrolling: do not use natural scroll
+#exec --no-startup-id /usr/bin/xinput set-button-map 11 1 2 3 5 4 6 7 &
 

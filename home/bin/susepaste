@@ -32,10 +32,10 @@ sub paste {
     }
 
     if ( $res->content =~
-        m!<td><a href="http://\w+.suse.de/(\d+)" class="paste">! )
+        m!<td><a href="http://[a-z.]+.suse.*/(\d+)" class="paste">! )
     {
-        print "http://pastebin.suse.de/" . $1 . "\n";
-        print "http://pastebin.suse.de/" . $1 . "/src" . "\n";
+        print "http://pastebin.nue.suse.com/" . $1 . "\n";
+        print "http://pastebin.nue.suse.com/" . $1 . "/src" . "\n";
         exit 0;
     }
 }

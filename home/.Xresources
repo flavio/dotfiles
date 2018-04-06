@@ -94,6 +94,8 @@ URxvt.matcher.button: 1
 URxvt.keysym.M-u: perl:url-select:select_next
 URxvt.underlineURLs: true
 
+URxvt.selection-to-clipboard.autocopy: true
+
 ! Remove default keyboard shortcuts to prevent clashes with tmux and other
 ! programs
 URxvt.tabbed.no-tabbedex-keys: true
@@ -105,6 +107,7 @@ URxvt.keysym.Alt-Shift-Right: perl:tabbedex:move_tab_right
 
 URxvt*loginShell:true
 URxvt.urgentOnBell: true
+urxvt*urgentOnBell: true
 URxvt.font: xft:Droid Sans Mono Dotted for Powerline:pixelsize=13:antialias=true:hinting=true
 URxvt.scrollBar: false
 

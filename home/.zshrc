@@ -82,6 +82,8 @@ alias json_pretty_print="python -mjson.tool"
 
 alias en_us_intl="setxkbmap -layout en -variant intl"
 
+alias docker-compose-overlay="docker-compose --x-networking --x-network-driver overlay"
+
 ################
 # TMUX section #
 ################
@@ -96,17 +98,17 @@ alias en_us_intl="setxkbmap -layout en -variant intl"
 bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 
-# force jruby to use 1.9 mode
-export JRUBY_OPTS="--1.9"
-
-# force rubinius to use 1.9 mode
-export RBXOPT='-X19'
-
 export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin/packer:$PATH"
 
 eval "$(rbenv init -)"
 
-export VAGRANT_DEFAULT_PROVIDER="libvirt"
+#export VAGRANT_DEFAULT_PROVIDER="libvirt"
 
 # required to get getgb.io work
 unalias gb
+
+# Refresh gpg-agent tty in case user switches into an X session
+gpg-connect-agent updatestartuptty /bye >/dev/null
+
+# direnv
+#eval "$(direnv hook zsh)"

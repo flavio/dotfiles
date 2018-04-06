@@ -8,6 +8,7 @@
 [user]
   name = Flavio Castelli
   email = fcastelli@suse.com
+	signingkey = 010CE040
 [alias]
   cp = cherry-pick
   co = checkout
@@ -22,3 +23,5 @@
 	enabled = 1
 [push]
 	default = simple
+[commit]
+	gpgsign = true

@@ -29,6 +29,7 @@ set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
 
 "Theming stuff
 set background=dark
+"set background=light
 colorscheme solarized
 
 "Invisible character colors
@@ -95,6 +96,7 @@ set laststatus=2
 " Syntastics
 let g:syntastic_enable_signs=1
 let g:syntastic_quiet_messages = {'level': 'warnings'}
+let g:syntastic_go_checkers = ['golint', 'govet', 'errcheck']
 
 " Paste large amount of text into Vim
 set pastetoggle=<F2>
@@ -120,3 +122,7 @@ map <leader>rT <Plug>SendFocusedTestToTmux
 
 " vim cfengine
 autocmd BufRead,BufNewFile *.cf normal zR
+
+" vim rust
+let g:rustfmt_autosave = 1
+let g:ycm_rust_src_path = '/usr/lib/rustlib/src/rust/src'
