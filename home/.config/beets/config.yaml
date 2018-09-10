@@ -1,0 +1,14 @@
+directory: /mnt/storage/Multimedia/music
+import:
+  copy: no
+  move: yes
+paths:
+  default: $albumartist/$year - $album%aunique{}/$track - $title
+  singleton: Non-Album/$artist/$title
+  comp: Compilations/$album%aunique{}/$track $title
+plugins: fetchart embedart replaygain
+original_date: yes
+scrub:
+  auto: yes
+replaygain:
+  backend: gstreamer

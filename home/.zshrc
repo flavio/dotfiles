@@ -98,7 +98,7 @@ alias docker-compose-overlay="docker-compose --x-networking --x-network-driver o
 bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 
-export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin/packer:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin:$PATH"
 
 eval "$(rbenv init -)"
 
