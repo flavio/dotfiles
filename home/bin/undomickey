@@ -1,0 +1,3 @@
+#! /bin/sh
+
+pactl set-card-profile 2 off; pactl set-card-profile 2 input:analog-mono
