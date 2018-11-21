@@ -11,7 +11,7 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
 Plug 'godlygeek/tabular'
-Plug 'vim-scripts/LustyJuggler'
+Plug 'sjbach/lusty'
 Plug 'vim-scripts/YankRing.vim'
 Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
 Plug 'yggdroot/indentline'
@@ -122,6 +122,7 @@ cmap w!! w !sudo tee % >/dev/null
 set title        " change the terminal's title
 set visualbell   " don't beep
 set noerrorbells " don't beep
+set hidden
 
 " vim powerline
 let g:Powerline_symbols = 'fancy'
