@@ -233,3 +233,5 @@ exec --no-startup-id redshift-gtk &
 # Emulate middle mouse clicking
 exec --no-startup-id xinput set-prop "Primax Kensington Eagle Trackball" "libinput Middle Emulation Enabled" 1
 
+# touchpad: enable natural scrolling
+exec --no-startup-id xinput --set-prop "Synaptics TM3075-002" "libinput Natural Scrolling Enabled" 1
