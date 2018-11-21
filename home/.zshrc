@@ -44,7 +44,7 @@ DISABLE_AUTO_UPDATE="true"
 # Load solarized dircolors
 eval `dircolors ~/.zsh/dircolors-solarized/dircolors.256dark`
 
-all_platform_plugins=(docker gitfast last-working-dir mosh vagrant vi-mode)
+all_platform_plugins=(docker gitfast last-working-dir mosh vagrant)
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   all_platform_plugins=($all_platform_plugins ssh-agent)
@@ -112,3 +112,6 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # direnv
 #eval "$(direnv hook zsh)"
+
+# fzf
+source /etc/zsh_completion.d/fzf-key-bindings
