@@ -1,6 +1,27 @@
 filetype off
-call pathogen#infect()
-filetype plugin indent on
+" call pathogen#infect()
+
+" vim plug
+call plug#begin('~/.vim/plugged')
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'stamblerre/gocode', { 'rtp': 'vim', 'do': '~/.vim/plugged/gocode/vim/symlink.sh' }
+Plug 'rking/ag.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'godlygeek/tabular'
+Plug 'vim-scripts/LustyJuggler'
+Plug 'vim-scripts/YankRing.vim'
+Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
+Plug 'yggdroot/indentline'
+Plug 'ctrlpvim/ctrlp.vim'
+
+" Initialize plugin system
+call plug#end()
+
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
 
 syntax on
 
@@ -30,7 +51,7 @@ set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:<
 "Theming stuff
 set background=dark
 "set background=light
-colorscheme solarized
+colorscheme solarized8
 
 "Invisible character colors
 highlight NonText guifg=#4a4a59
@@ -39,9 +60,6 @@ highlight SpecialKey guifg=#4a4a59
 "Highlight long lines
 :au BufWinEnter * let w:m1=matchadd('Search', '\%<81v.\%>77v', -1)
 :au BufWinEnter * let w:m2=matchadd('ErrorMsg', '\%>80v.\+', -1)
-
-" Rainbows!
-nmap <leader>R :RainbowParenthesesToggle<CR>
 
 " Yankring
 nnoremap <silent> <F3> :YRShow<cr>
@@ -54,18 +72,12 @@ inoremap <silent> <F3> <ESC>:YRShow<cr>
   \ endif
 
 " Changelog
-let g:changelog_username = "Flavio Castelli <flavio@castelli.name>"
+let g:changelog_username = "Flavio Castelli <flavio@castelli.me>"
 let g:changelog_dateformat = "%a %b %d %H:%M:%S %Z %Y"
 
 " CtrlP
 nmap <leader>t :CtrlP<CR>
 let g:ctrlp_working_path_mode = 'a'
-
-" Gundo
-nnoremap <F5> :GundoToggle<CR>
-
-" Tagbar
-nmap <F6> :TagbarToggle<CR>
 
 " Highlight current word
 " autocmd CursorMoved * silent! exe printf('match IncSearch /\<%s\>/', expand('<cword>'))
@@ -107,21 +119,12 @@ nmap <silent> ,/ :nohlsearch<CR>
 " When you forget to run sudo before editing files
 cmap w!! w !sudo tee % >/dev/null
 
-
 set title        " change the terminal's title
 set visualbell   " don't beep
 set noerrorbells " don't beep
 
 " vim powerline
 let g:Powerline_symbols = 'fancy'
-
-" vim turbux
-let g:no_turbux_mappings = 1
-map <leader>rt <Plug>SendTestToTmux
-map <leader>rT <Plug>SendFocusedTestToTmux
-
-" vim cfengine
-autocmd BufRead,BufNewFile *.cf normal zR
 
 " vim rust
 let g:rustfmt_autosave = 1
