@@ -115,3 +115,17 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # fzf
 source /etc/zsh_completion.d/fzf-key-bindings
+
+# kube-ps1
+source /home/flavio/bin/.kube-ps1/kube-ps1.sh
+PROMPT='$(kube_ps1)'$PROMPT
+kubeoff -g
+
+# hub cli
+eval "$(hub alias -s)"
+
+
+# https://github.com/kubernetes/kubernetes/issues/46381#issuecomment-461404505
+function kmerge() {
+  KUBECONFIG=~/.kube/config:$1 kubectl config view --flatten > ~/.kube/mergedkub && mv ~/.kube/mergedkub ~/.kube/config
+}
