@@ -166,11 +166,11 @@ workspace_auto_back_and_forth yes
 # finds out, if available)
 
 bar {
-  output eDP1
+  output eDP-1
         position top
         status_command i3status
         workspace_buttons yes
-        tray_output eDP1
+        tray_output eDP-1
   colors {
     separator #666666
     background #333333
@@ -183,11 +183,11 @@ bar {
 }
 
 bar {
-  output DP2-1
+  output DP-2-2
         position top
         status_command i3status
         workspace_buttons yes
-        tray_output DP2-1
+        tray_output DP-2-2
   colors {
     separator #666666
     background #333333
@@ -199,30 +199,36 @@ bar {
   }
 }
 
-exec --no-startup-id xsettings -c /home/flavio/.xsettings
+exec --no-startup-id xrandr --output eDP-1 --off
+
+#exec --no-startup-id xsettings -c /home/flavio/.xsettings
 
 # Start dunst notification manager at boot
 exec --no-startup-id dunst
 
 # Proper configuration of multi monitor
-exec --no-startup-id xrandr --output DP2-2 --pos 0x0 --left-of DP2-1 --output DP2-1 --pos 1920x0
+#exec --no-startup-id xrandr --output DP-2-2 --pos 0x0 --left-of DP-2-1 --output DP-2-1 --pos 1920x0
 
 exec --no-startup-id nm-applet
 exec --no-startup-id parcellite
 #exec --no-startup-id redshift-gtk -l 45.673892100000000000:9.688943600000016000
 # disable system bell
 #exec --no-startup-id xset b off
+
 # disable screensaver and power saving feature - they crash everything on tumbleweed when I dock my laptop
 exec --no-startup-id xset -dpms
 exec --no-startup-id xset s off
+
 # wallpapers
 exec --no-startup-id nitrogen --restore
 
 exec --no-startup-id gnome-keyring-daemon &
 exec --no-startup-id syncthing-gtk -m &
 exec --no-startup-id /usr/lib/polkit-gnome-authentication-agent-1 &
-exec --no-startup-id /usr/lib/deja-dup/deja-dup-monitor &
+#exec --no-startup-id /usr/lib/deja-dup/deja-dup-monitor &
 #exec --no-startup-id qxkb &
+
+exec --no-startup-ip xdg-settings set default-web-browser firefox.desktop &
 
 # start redshift
 exec --no-startup-id redshift-gtk &

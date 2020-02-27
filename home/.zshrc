@@ -44,7 +44,7 @@ DISABLE_AUTO_UPDATE="true"
 # Load solarized dircolors
 eval `dircolors ~/.zsh/dircolors-solarized/dircolors.256dark`
 
-all_platform_plugins=(docker gitfast last-working-dir mosh vagrant)
+all_platform_plugins=(docker gitfast last-working-dir mosh vagrant kubectl)
 
 if [ -z "$SSH_AUTH_SOCK" ]; then
   all_platform_plugins=($all_platform_plugins ssh-agent)
@@ -99,13 +99,13 @@ bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 
 export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin:$PATH"
-
+export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 eval "$(rbenv init -)"
 
-#export VAGRANT_DEFAULT_PROVIDER="libvirt"
+# kubebuilder
+export PATH="$PATH:/usr/local/kubebuilder/bin"
 
-# required to get getgb.io work
-unalias gb
+#export VAGRANT_DEFAULT_PROVIDER="libvirt"
 
 # Refresh gpg-agent tty in case user switches into an X session
 gpg-connect-agent updatestartuptty /bye >/dev/null
@@ -123,7 +123,6 @@ kubeoff -g
 
 # hub cli
 eval "$(hub alias -s)"
-
 
 # https://github.com/kubernetes/kubernetes/issues/46381#issuecomment-461404505
 function kmerge() {
