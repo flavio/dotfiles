@@ -22,3 +22,6 @@
 [submodule "home/.vim/pack/themes/opt/solarized8"]
 	path = home/.vim/pack/themes/opt/solarized8
 	url = https://github.com/lifepillar/vim-solarized8.git
+[submodule "home/.zsh/oh-my-zsh-customizations/themes/powerlevel10k"]
+	path = home/.zsh/oh-my-zsh-customizations/themes/powerlevel10k
+	url = https://github.com/romkatv/powerlevel10k.git
