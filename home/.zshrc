@@ -55,8 +55,7 @@ all_platform_plugins=(docker gitfast last-working-dir mosh vagrant kubectl)
 if [ -z "$SSH_AUTH_SOCK" ]; then
   all_platform_plugins=($all_platform_plugins ssh-agent)
 fi
-
-plugins=($all_platform_plugins $os_plugins)
+plugins=($all_platform_plugins)
 
 source $ZSH/oh-my-zsh.sh
 source ~/.zsh/jump.plugin.zsh
@@ -104,12 +103,9 @@ alias docker-compose-overlay="docker-compose --x-networking --x-network-driver o
 bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 
-export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin:$PATH"
+export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin:/usr/local/kubebuilder/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 eval "$(rbenv init -)"
-
-# kubebuilder
-export PATH="$PATH:/usr/local/kubebuilder/bin"
 
 #export VAGRANT_DEFAULT_PROVIDER="libvirt"
 
@@ -122,10 +118,8 @@ gpg-connect-agent updatestartuptty /bye >/dev/null
 # fzf
 source /etc/zsh_completion.d/fzf-key-bindings
 
-# kube-ps1
-source /home/flavio/bin/.kube-ps1/kube-ps1.sh
-PROMPT='$(kube_ps1)'$PROMPT
-kubeoff -g
+# required to get operator-sdk to work when upstream release binaries are used
+export GOROOT=$(go env GOROOT)
 
 # hub cli
 eval "$(hub alias -s)"
