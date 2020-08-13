@@ -49,6 +49,9 @@ endif
 set list
 set listchars=tab:▸\ ,eol:¬,trail:~,extends:>,precedes:< 
 
+" allow backspace over everything in insert mode
+set backspace=indent,eol,start
+
 "Theming stuff
 set background=dark
 "set background=light
