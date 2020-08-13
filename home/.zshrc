@@ -1,11 +1,25 @@
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.zsh/oh-my-zsh
+ZSH_CUSTOM=$HOME/.zsh/oh-my-zsh-customizations
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="jreese"
+
+ZSH_THEME="powerlevel9k/powerlevel9k"
+POWERLEVEL9K_PROMPT_ON_NEWLINE=true
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time)
+kubeon() { POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(kubecontext status time) }
+kubeoff() { POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status time) }
+
+
+#ZSH_THEME="jreese"
+## kube-ps1
+#source /home/flavio/bin/.kube-ps1/kube-ps1.sh
+#PROMPT='$(kube_ps1)'$PROMPT
+#kubeoff -g
+
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
