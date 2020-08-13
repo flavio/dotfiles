@@ -25,3 +25,6 @@
 [submodule "home/.zsh/oh-my-zsh-customizations/themes/powerlevel10k"]
 	path = home/.zsh/oh-my-zsh-customizations/themes/powerlevel10k
 	url = https://github.com/romkatv/powerlevel10k.git
+[submodule "home/.tmux/plugins/tpm"]
+	path = home/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm.git
