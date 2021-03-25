@@ -16,7 +16,9 @@ Plug 'vim-scripts/YankRing.vim'
 Plug 'powerline/powerline', { 'rtp': 'powerline/bindings/vim' }
 Plug 'yggdroot/indentline'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'rust-lang/rust.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'preservim/tagbar'
 
 " Initialize plugin system
 call plug#end()
@@ -198,6 +200,8 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
+" Toggle TagBar
+nmap <F8> :TagbarToggle<CR>
 
 " disable vim-go :GoDef short cut (gd)
 " this is handled by LanguageClient [LC]
