@@ -103,9 +103,11 @@ alias docker-compose-overlay="docker-compose --x-networking --x-network-driver o
 bindkey "^[OH" beginning-of-line
 bindkey "^[OF" end-of-line
 
-export PATH="$HOME/.rbenv/bin:$HOME/go/bin:$HOME/bin:/usr/local/kubebuilder/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
+export PATH="$HOME/.cargo/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/kubebuilder/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-eval "$(rbenv init -)"
 
 #export VAGRANT_DEFAULT_PROVIDER="libvirt"
 
@@ -121,10 +123,18 @@ source /etc/zsh_completion.d/fzf-key-bindings
 # required to get operator-sdk to work when upstream release binaries are used
 export GOROOT=$(go env GOROOT)
 
-# hub cli
-eval "$(hub alias -s)"
-
 # https://github.com/kubernetes/kubernetes/issues/46381#issuecomment-461404505
 function kmerge() {
   KUBECONFIG=~/.kube/config:$1 kubectl config view --flatten > ~/.kube/mergedkub && mv ~/.kube/mergedkub ~/.kube/config
 }
+
+# wasmer
+export WASMER_DIR="/home/flavio/.wasmer"
+[ -s "$WASMER_DIR/wasmer.sh" ] && source "$WASMER_DIR/wasmer.sh"
+
+# wasmtime
+export WASMTIME_HOME="$HOME/.wasmtime"
+export PATH="$WASMTIME_HOME/bin:$PATH"
+
+# kubewarden
+alias kw="cd ~/hacking/kubernetes/kubewarden"
