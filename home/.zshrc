@@ -108,6 +108,10 @@ export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/kubebuilder/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
+export PATH="$HOME/.krew-wasm/bin:$PATH"
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH="/home/flavio/.dotnet:$PATH"
 
 #export VAGRANT_DEFAULT_PROVIDER="libvirt"
 
