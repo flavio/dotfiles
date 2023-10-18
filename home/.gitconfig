@@ -15,6 +15,7 @@
   st = status
   ci = commit
   pu = !"git fetch origin -v; git fetch upstream -v; git merge upstream/master"
+  sync = !"git fetch --prune origin -v; git fetch upstream -v; git rebase upstream/main"
 [branch]
  # automatically merge from remote branches on 'git pull'
  autosetupmerge = true
@@ -25,6 +26,8 @@
 	default = simple
 [commit]
 	gpgsign = true
-[url "git@github.com:"]
-	insteadOf = https://github.com/
-	insteadOf = git://github.com/
+#[url "git@github.com:"]
+#  insteadOf = https://github.com/
+#  insteadOf = git://github.com/
+[init]
+	defaultBranch = main
