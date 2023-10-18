@@ -72,7 +72,7 @@ export EDITOR=lvim
 export LANGUAGE=en_US
 export TERM=xterm-256color
 export TNS_ADMIN=/etc # set oracle home
-
+export NIX_PAGER=cat
 
 # ssh without memory
 alias ssh_anon="ssh -o \"UserKnownHostsFile /dev/null\""
@@ -110,6 +110,8 @@ export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/kubebuilder/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.krew-wasm/bin:$PATH"
+export PATH="/opt/zig:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 export DOTNET_ROOT=$HOME/.dotnet
 export PATH="/home/flavio/.dotnet:$PATH"
