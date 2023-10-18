@@ -1,5 +1,7 @@
 {
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
   "rust-analyzer.inlayHints.enable": false,
+  "rust-analyzer.procMacro.enable": true,
   "languageserver": {
     "golang": {
       "command": "gopls",
@@ -8,6 +10,11 @@
       "initializationOptions": {
         "usePlaceholders": true
       }
+    },
+    "clangd": {
+      "command": "clangd",
+      "rootPatterns": ["compile_flags.txt", "compile_commands.json"],
+      "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"]
     }
   }
 }
