@@ -68,7 +68,7 @@ bindkey "\e[3~" delete-char
 bindkey "\e$terminfo[kcub1]" backward-word
 bindkey "\e$terminfo[kcuf1]" forward-word
 
-export EDITOR=vim
+export EDITOR=lvim
 export LANGUAGE=en_US
 export TERM=xterm-256color
 export TNS_ADMIN=/etc # set oracle home
@@ -88,6 +88,7 @@ alias json_pretty_print="python -mjson.tool"
 alias en_us_intl="setxkbmap -layout en -variant intl"
 
 alias docker-compose-overlay="docker-compose --x-networking --x-network-driver overlay"
+alias vim="lvim"
 
 ################
 # TMUX section #
