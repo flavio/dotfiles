@@ -122,7 +122,7 @@ export PATH="/home/flavio/.dotnet:$PATH"
 gpg-connect-agent updatestartuptty /bye >/dev/null
 
 # direnv
-#eval "$(direnv hook zsh)"
+eval "$(direnv hook zsh)"
 
 # fzf
 source /etc/zsh_completion.d/fzf-key-bindings
