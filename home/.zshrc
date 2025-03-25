@@ -68,7 +68,7 @@ bindkey "\e[3~" delete-char
 bindkey "\e$terminfo[kcub1]" backward-word
 bindkey "\e$terminfo[kcuf1]" forward-word
 
-export EDITOR=lvim
+export EDITOR=nvim
 export LANGUAGE=en_US
 export TERM=xterm-256color
 export TNS_ADMIN=/etc # set oracle home
@@ -88,7 +88,7 @@ alias json_pretty_print="python -mjson.tool"
 alias en_us_intl="setxkbmap -layout en -variant intl"
 
 alias docker-compose-overlay="docker-compose --x-networking --x-network-driver overlay"
-alias vim="lvim"
+alias vim="nvim"
 
 ################
 # TMUX section #
@@ -107,7 +107,6 @@ bindkey "^[OF" end-of-line
 export PATH="$HOME/go/bin:$PATH"
 export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
-export PATH="/usr/local/kubebuilder/bin:$PATH"
 export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
 export PATH="$HOME/.krew-wasm/bin:$PATH"
 export PATH="/opt/zig:$PATH"
@@ -145,3 +144,5 @@ export PATH="$WASMTIME_HOME/bin:$PATH"
 
 # kubewarden
 alias kw="cd ~/hacking/kubernetes/kubewarden"
+
+eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
